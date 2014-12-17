@@ -13,6 +13,7 @@ namespace :load do
     set :pg_ask_for_password, false
     set :pg_password, -> { ask_for_or_generate_password }
     set :pg_system_user, 'postgres'
+    set :pg_system_password, ask('Postgresql database password for remote host:', nil)
     set :pg_system_db, 'postgres'
     set :pg_use_hstore, false
     set :pg_extensions, []
